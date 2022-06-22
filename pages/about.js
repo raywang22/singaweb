@@ -1,11 +1,6 @@
 import Head from 'next/head'
-import { useRouter } from 'next/router'
-import i18n from '../lib/i18n'
 
-export default function Home() {
-  const router = useRouter()
-  i18n.locale(router.locale)
-  
+export default function About(props) {
   return (
     <div className="container">
       <Head>
@@ -14,7 +9,7 @@ export default function Home() {
       </Head>
 
       <main>
-        { i18n.t('content') }
+       about
       </main>
 
       <footer>
@@ -23,3 +18,4 @@ export default function Home() {
     </div>
   )
 }
+
